@@ -1,0 +1,37 @@
+-- =============================
+-- DAILY ROTATING KEY SYSTEM
+-- =============================
+
+local function getDailyKey()
+    local d = os.date("!*t") -- UTC time
+    -- Even day → DrakoHubScript, Odd day → ScriptDrakoHub
+    if d.yday % 2 == 0 then
+        return "DrakoHubScript"
+    else
+        return "ScriptDrakoHub"
+    end
+end
+
+-- =============================
+-- KAVO UI KEY WINDOW
+-- =============================
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local KeyWindow = Library.CreateLib("YTScript | Key System", "DarkTheme")
+local KeyTab = KeyWindow:NewTab("Key")
+local KeySection = KeyTab:NewSection("Enter Today's Key")
+
+KeySection:NewTextBox("Key", "Key changes every day", function(input)
+    local CURRENT_KEY = getDailyKey() -- always calculate fresh
+    if input == CURRENT_KEY then
+        Library:ToggleUI()
+        -- LOAD YOUR MAIN SCRIPT HERE
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/Scripts"))()
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Key System",
+            Text = "Invalid or Expired Key",
+            Duration = 3
+        })
+    end
+end)
