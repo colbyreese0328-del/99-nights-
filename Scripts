@@ -1,0 +1,59 @@
+--=============================
+-- OP Roblox Script GUI - Drako UI Style
+--=============================
+-- Load Drako UI Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+-- Create Window
+local Window = Library.CreateLib("DrakoHub Script", "DarkTheme") -- "DarkTheme" or "LightTheme"
+
+-- ==========================
+-- Main Tab
+-- ==========================
+local MainTab = Window:NewTab("Main")
+local ScriptsSection = MainTab:NewSection("Scripts")
+
+-- Button for Fight in a School
+ScriptsSection:NewButton("Fight in a School", "Execute Fight in a School Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/fiasbydrakohub"))()
+end)
+
+-- Button for TSB
+ScriptsSection:NewButton("TSB", "Execute TSB Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/Tsbbydrakohub"))()
+end)
+
+-- Button for 99 Nights
+ScriptsSection:NewButton("99 Nights", "Execute 99 Nights Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/99nightsbydrakohub"))()
+end)
+
+-- Button for Scary Spelling
+ScriptsSection:NewButton("Scary Spelling", "Execute Scary Spelling Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/Scaryspellingbydrakohub"))()
+end)
+
+-- Button for Basketball Legends
+ScriptsSection:NewButton("Basketball Legends", "Execute Basketball Legends Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/basketballlegendsbydrakohub"))()
+end)
+
+-- Button for SAB
+ScriptsSection:NewButton("SAB", "Execute SAB Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/Sabbydrakohub"))()
+end)
+
+-- Button for Arsenal
+ScriptsSection:NewButton("Arsenal", "Execute Arsenal Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/arsenalbydrakohub"))()
+end)
+
+-- Button for Da Hood
+ScriptsSection:NewButton("Da Hood", "Execute Da Hood Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/Dahoodbydrakohub"))()
+end)
+
+-- Button for You vs Homer
+ScriptsSection:NewButton("You vs Homer", "Execute You vs Homer Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/colbyreese0328-del/99-nights-/refs/heads/main/youvshomerbydrakohub"))()
+end)
